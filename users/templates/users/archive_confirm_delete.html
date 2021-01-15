@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block body %}
+<div class ="row justify-content-center top-buffer">
+<div class ="card border-0">
+    <div class="content-section">
+            <form method="POST">
+            {% csrf_token %}
+            <fieldset class="form-group"><h5>Delete Post</h5>
+                <legend class="border-bottom mb-4">
+                </legend>
+                <h5>Are you sure you would like to delete "{{ object.archive_name }}?"</h5>
+            </fieldset>
+            <div class="form-group">
+                <button class="btn btn-outline-danger" type="submit">
+                    Delete
+                </button>
+            </div>
+        </form>
+    </div>     
+</div>
+</div>
+
+{% endblock %}%}
